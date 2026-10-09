@@ -46,7 +46,7 @@ def obtener_datos (departamento, municipio, cultivo, numero_de_registros):
     if filtro.empty:
         raise datos_no_encontrados("No hay registro para esa consulta.")
 
-    topografia = ",".join(filtro['Topografia'].dropna().unique())
+    topografia = ", ".join(filtro['Topografia'].dropna().unique())
 
     return {
         "Departamento": departamento.upper(),
